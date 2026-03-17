@@ -1,0 +1,15 @@
+{
+  "short_name": "MoodTracker",
+  "name": "Hermela's Emotion Tracker",
+  "icons": [
+    {
+      "src": "image1.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#240b7b",
+  "background_color": "#ffffff"
+}
