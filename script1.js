@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySavedName(); // Load Name
     loadProfilePhoto(); // Load Photo
     loadHistory();      // Load Moods
+    animateBars(); // Add this line here!
+function animateBars() {
+    // These percentages are just examples, 
+    // later we can make them match your actual mood history!
+    document.getElementById('bar-Calm').style.width = "80%";
+    document.getElementById('bar-Anxious').style.width = "40%";
+    document.getElementById('bar-Sad').style.width = "20%";
+    document.getElementById('bar-Angry').style.width = "10%";
+}
 });
 
 // --- 2. PROFILE & NAME LOGIC ---
