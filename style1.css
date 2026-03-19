@@ -659,3 +659,9 @@ input:checked + .slider:before { transform: translateX(20px); }
 .selected-sad    { box-shadow: 0 0 20px #87CEEB; border: 2px solid #87CEEB !important; }
 .selected-anxious { box-shadow: 0 0 20px #B19CD9; border: 2px solid #B19CD9 !important; }
 .selected-angry  { box-shadow: 0 0 20px #FF6961; border: 2px solid #FF6961 !important; }
+
+/* Animation for the Mood Bars */
+.bar-calm, .bar-anxious, .bar-sad, .bar-angry {
+    width: 0; /* Start at zero */
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1); /* Smooth 'pop' effect */
+}
