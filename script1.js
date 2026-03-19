@@ -289,3 +289,27 @@ function selectMood(element, mood) {
     
     selectedMoodStr = mood;
 }
+function checkReminders() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
+    // Sends notification at the start of the hour
+    if (minutes === 0) {
+        if (hours === 8)  sendNotification("Morning Reflection ☀️", "How are you feeling this morning?");
+        if (hours === 13) sendNotification("Lunch Check-in 🥗", "Take a breath. How is your day going?");
+        if (hours === 19) sendNotification("Evening Wrap-up 🌙", "Time to log your final mood for today.");
+    }
+}
+
+// Checks every minute
+setInterval(checkReminders, 60000);
+
+function sendNotification(title, message) {
+    if (Notification.permission === "granted") {
+        new Notification(title, { 
+            body: message, 
+            icon: "image1.jpg" 
+        });
+    }
+}
